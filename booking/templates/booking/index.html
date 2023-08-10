@@ -1,0 +1,82 @@
+{% extends "booking/base.html" %} 
+{% load static %} 
+{% load bootstrap_icons %}
+{% block content %}
+<main>
+  <section
+    style="
+    background-image: url('static/booking/images/treadwell_logo.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    height: 500px;
+    "
+    class="py-5 text-center container bg-treadwell mb-n2"
+  >
+  </section>
+  <div class="container">
+  <div class="row py-lg-5 bg-treadwell">
+    <div class="col-lg-6 col-md-8 mx-auto text-center py-3">
+      <p class="lead treadwell-tertiary high-school">
+        Professional footcare services in West Yorkshire, from the comfort of your own home.
+      </p>
+      <p>
+        <a href="{% url 'booking:treatments' %}" class="btn bg-treadwell-secondary treadwell-tertiary high-school my-2">Treatments</a>
+        <a href="{% url 'booking:contact' %}" class="btn bg-treadwell-secondary treadwell-tertiary high-school my-2">Contact Us</a>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="album py-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div style="min-height: 420px;" class="card shadow-sm">
+            <a href="https://www.foothealthcareregister.co.uk/our-register"><img style="height: 210px;" src="{% static 'booking/images/PR_logo.png' %}" class="mx-auto d-block" alt=""></a>
+            <div class="card-body">
+              <p class="card-text">
+                We are professionally registered with the PRFHC - Reg No PRFHC0080. 
+              </p>
+              <p>Registration ensures that Foot Care Practitioners are kept up-to-date with with the latest technology, instruments and foot related subjects to further advance skills and knowledge.</p>
+              <div
+                class="d-flex justify-content-between align-items-center"
+              ></div>
+            </div>
+          </div>
+        
+        </div>
+        <div class="col">
+          <div style="min-height: 420px;" class="card shadow-sm">
+            <img style="height: 210px;" src="{% static 'booking/images/pebble-feet.jpg' %}" alt="">
+
+            <div class="card-body">
+              <p class="card-text">
+               We offer a mobile service covering most of West Yorkshire. Please get in touch via the <a style="text-decoration: none;" class="treadwell-secondary" href="{% url 'booking:contact' %}">Contact</a> page to see if we can help. 
+              </p>
+              <p>Connect with us on <a style="text-decoration: none;" class="treadwell-secondary" href="https://www.facebook.com/people/Treadwell-Footcare/100093346523027/">Facebook</a> and <a style="text-decoration: none;" class="treadwell-secondary" href="https://www.instagram.com/treadwellfootcare/?igshid=MzRlODBiNWFlZA%3D%3D">Instagram.</a></p>
+              <div
+                class="d-flex justify-content-between align-items-center"
+              ></div>
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="col">
+          <div style="min-height: 420px;" class="card shadow-sm">
+            <img style="height: 210px;" src="{% static 'booking/images/foot-treatment.jpg' %}" alt="">
+
+            <div class="card-body">
+              <p class="card-text">
+                We treat a wide range of conditions and pride ourselves in quality, professional work at a competitive price.
+              </p>
+              <p class="card-text">Visit the <a style="text-decoration: none;" class="treadwell-secondary" href="{% url 'booking:treatments' %}">Treatments</a> page to see which treatments we have to offer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+

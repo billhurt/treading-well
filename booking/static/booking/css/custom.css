@@ -1,0 +1,30 @@
+@font-face {font-family:"High School USA Sans";src:url("High_School_USA_Sans.eot?") format("eot"),url("High_School_USA_Sans.woff") format("woff"),url("High_School_USA_Sans.ttf") format("truetype"),url("High_School_USA_Sans.svg#HighSchoolUSASans") format("svg");font-weight:normal;font-style:normal;}
+
+.bg-treadwell {
+    background-color: #27334E !important;
+}
+
+.bg-treadwell-secondary {
+    background-color: #38C6BD !important;
+}
+
+.bg-treadwell-tertiary {
+    background-color: #EAFADA !important;
+}
+
+.treadwell-primary {
+    color: #27334E !important;
+}
+
+.treadwell-secondary {
+    color: #38C6BD !important;
+}
+
+.treadwell-tertiary {
+    color: #EAFADA !important;
+}
+
+.high-school {
+    font-family:"High School USA Sans";
+    letter-spacing: .1rem;
+}

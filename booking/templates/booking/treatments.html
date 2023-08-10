@@ -1,0 +1,191 @@
+{% extends "booking/base.html" %} 
+{% load static %}
+{% block content %}
+<nav
+  style="min-height:50px;" class="navbar navbar-expand-lg navbar-dark bg-treadwell container"
+>
+  <a class="navbar-brand high-school treadwell-tertiary" href="#">Treatments</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon navbar-light"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse justify-content-end"
+    id="navbarNavAltMarkup"
+  >
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link high-school treadwell-tertiary" href="{% url 'booking:index' %}"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link high-school treadwell-tertiary"
+          href="{% url 'booking:contact' %}"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+	<div class="row py-lg-5 bg-treadwell">
+		<div class="col-lg-6 col-md-8 mx-auto text-center py-3">
+		  <p class="lead treadwell-tertiary">
+			Treatments start at £20. Please get in touch via the <a href="{% url 'booking:contact' %}" style="text-decoration: none;" class="treadwell-secondary">Contact</a> page to book your individual consultation.</p>
+		  </p>
+		</div>
+	  </div>
+	<div class="album py-3">
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+		  <div class="col">
+			<div class="card shadow-sm">
+			  <div style="min-height: 717px;" class="card-body">
+				  <h3>Cracked Heels</h3>
+				  <p>Cracked heels are a common condition which can develop when the area of skin around the heel becomes excessively dry and begins to crack; or when the area is too soft and wet, making it more susceptible to splitting. When the condition of the skin around the heel is abnormally dry or wet and the area is put under pressure from the weight of the body, the skin cannot stretch and spread to accommodate the increased pressure as it normally would, thus it begins to split. Cracked heels can be an issue for patients as they are often painful and unsightly. However, split heels can be a more serious issue as they can sometimes provide a portal of entry to bacteria leading to infection.</p>
+			<p>Treatment will depend upon the individual patient and will be subject to a thorough assessment. Treatment may involve the following procedures: 
+				<ul>
+					<li>Removal of hard skin around the heels with a scalpel</li>
+					<li>Use of a foot file to remove the hard skin</li>
+					<li>A combination of sharp debridement and filing</li>
+					<li>Emollient therapy (moisturisation)</li>
+					<li>Foot care and footwear advice/education</p></li>
+				</ul> 
+							<!-- Button trigger modal -->
+<button type="button" class="btn bg-treadwell-secondary treadwell-tertiary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+	Example
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Cracked Heel Before/After</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<img style="max-width: 450px;" src="{% static 'booking/images/cracked-heel.jpg' %}" alt="">
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn bg-treadwell-secondary treadwell-tertiary" data-bs-dismiss="modal">Close</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col">
+			<div class="card shadow-sm">
+				<div style="min-height: 717px;" class="card-body">
+					<h3>Nail Trimming/Filing</h3>
+					<p>It is important to have nails regularly (and correctly) cut and filed to allow the nails to regrow without complications, and to maintain healthy feet.</p>
+					<p>Incorrect trimming of the nails can cause complications such as ingrown toenails and damage to the surrounding skin, which in certain circumstances can lead to infection. </p> 
+					<p>As we age, nails can change in thickness, shape, colour and can become difficult to trim; leading to neglected foot health. </p>
+					<p>Having your nails professionally cut and filed on a regular basis will help to maintain the health of your feet and prevent problems from developing.</p>
+						
+			
+							  <!-- Button trigger modal -->
+  <button type="button" class="btn bg-treadwell-secondary treadwell-tertiary" data-bs-toggle="modal" data-bs-target="#nailModal">
+	  Example
+	</button>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="nailModal" tabindex="-1" aria-labelledby="nailLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="nailLabel">Nail Trimming/Filing Before/After</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body">
+			  <img style="max-width: 450px;" src="{% static 'booking/images/nail-trimming.jpg' %}" alt="">
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn bg-treadwell-secondary treadwell-tertiary" data-bs-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<img src="{% static 'booking/images/treadwell_logo_cropped.png' %}" style="max-width: 12em; display: block;" class="mx-auto py-3" alt="">
+				</div>
+			  </div>
+		  </div>
+		  <div class="col">
+			<div class="card shadow-sm">
+				<div style="min-height: 717px;" class="card-body">
+					<h3>Verrucas</h3>
+					<p>Verrucas are warts on the soles of your feet. They may have tiny black dots in the centre – these are blood clots that have formed in tiny blood vessels.</p> 
+					<p>They may be painful, especially when you put weight on them. Sometimes, if you have clusters of verrucas, they can fuse together. These are called mosaic warts.</p>
+					<p>We treat verrucas using Verrutop, which is a topical solution for professional use, providing painless treatment of difficult warts that is highly effective in just a few applications. Once applied to the warts, it produces a painless mummification of the damaged tissue that causes the wart to detach automatically as healthy skin forms.</p>
+					<p>If you are finding it difficult to get shut of a Verruca then it could be worth getting it checked to make sure it is not a corn or a callous; covering up a deeper problem. Get in touch via the <a href="{% url 'booking:contact' %}" style="text-decoration: none;" class="treadwell-secondary">Contact</a> page to see how we can help.</p>
+				</div>
+			  </div>
+		  </div>
+		  <div class="col">
+			<div class="card shadow-sm">
+				<div style="min-height: 717px;" class="card-body">
+					<h3>Callus and Corn Treatment</h3>
+					<p>Corns and calluses are caused by pressure or rubbing of the skin on the hands or feet.</p>
+					<p>For example, from:</p>
+						<ul>
+						<li>High heels, uncomfortable shoes or shoes that are the wrong size</li> 
+						<li>Not wearing socks with shoes</li>
+						<li>Lifting heavy weights</li>
+						<li>Playing a musical instrument</li>
+						</ul>
+						<p>As foot specialists we can offer treatments such as:</p>
+						<ul>
+							<li>Cutting away the corn or callus</li>
+							<li>Patches to help soften the hard skin so it can be removed</li>
+							<li>Specially made soft pads or insoles to take pressure off the painful area of your foot</li>
+						</ul>	
+				</div>
+			  </div>
+		  </div>
+		  <div class="col">
+			<div class="card shadow-sm">
+				<div style="min-height: 717px;" class="card-body">
+					<h3>Diabetic Foot Care</h3>	
+					<p>Diabetes UK recommend that a trained professional checks your bare feet once a year.</p>
+					<p>With diabetes, it means you’re much more likely to develop problems with your feet.</p>
+					<p>Good nail care, moisturising areas of dry skin and careful and precise practice when skin removal is required, can all help reduce the risk of complications associated with Diabetic foot care.</p>
+					<img src="{% static 'booking/images/treadwell_logo_cropped.png' %}" style="max-width: 12em; display: block;" class="mx-auto my-5" alt="">
+				</div>
+			  </div>
+		  </div>
+		  <div class="col">
+			<div class="card shadow-sm">
+				<div style="min-height: 717px;" class="card-body">
+					<h3>Thickened Nails</h3>	
+					<p>The most common cause of thickened toenails is trauma. This could be a single traumatic
+					event such as stubbing the toe or dropping a heavy object upon it.</p>
+					<p>Other causes include:</p>
+						<ul>
+							<li>Poorly fitting footwear (microtrauma)</li>
+							<li>Certain sporting activities (more pressure on the toes)</li>
+							<li>Fungal nails</li>
+							<li>Aging</li>
+							<li>Certain skin conditions, eg, psoriasis.</li>
+							<li>Neglect</li>
+						</ul>
+					<p>Thick toe nails can be managed using an emery board and filing the nail. This will stunt
+						nail growth and keep them manageable. We file each nail across the thickened part, to reduce the thickness.</p>
+				</div>
+			  </div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+{% endblock %}

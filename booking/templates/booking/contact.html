@@ -1,0 +1,97 @@
+{% extends "booking/base.html" %} 
+{% load crispy_forms_tags %} 
+{% load static %}
+{% load bootstrap_icons %} 
+{% block content %}
+
+<style>
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-treadwell container">
+  <a class="navbar-brand high-school treadwell-tertiary ms-4" href="#">Contact</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon navbar-light"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse justify-content-end"
+    id="navbarNavAltMarkup"
+  >
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link high-school treadwell-tertiary" href="{% url 'booking:index' %}"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link high-school treadwell-tertiary"
+          href="{% url 'booking:treatments' %}"
+          >Treatments</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- contact form start -->
+
+<section class="contact-form">
+  <div class="container bg-treadwell py-3">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg mb-5">
+        <form method="post" style="max-width: 500px">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">{% csrf_token %} {% crispy form %}</div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg">
+        <div class="treadwell-tertiary text-center">
+          <h2>Get in touch!</h2>
+          <p class="bi bi-envelope-at text-center treadwell-secondary py-2 my-3" style="font-size: 1.15em;">
+            <a
+              href="mailto:treadwellfootcare@outlook.com?&subject=Treadwell Footcare Enquiry"
+              style="text-decoration: none"
+              class="treadwell-tertiary"
+            >
+              treadwellfootcare@outlook.com</a
+            >
+          </p>
+          <p class="bi bi-telephone text-center treadwell-secondary py-2" style="font-size: 1.15em;">
+            <a
+              href="tel:07581417087"
+              style="text-decoration: none"
+              class="treadwell-tertiary"
+            >
+              07581 417 087</a
+            >
+          </p>
+          <img
+            src="{% static 'booking/images/treadwell_logo_cropped.png' %}"
+            style="max-width: 12em; display: block"
+            class="mx-auto my-5"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
